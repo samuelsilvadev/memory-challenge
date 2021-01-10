@@ -1,0 +1,2 @@
+@custom-media --gte-small (min-width: 720px);
+@custom-media --gte-medium (min-width: 1024px);
