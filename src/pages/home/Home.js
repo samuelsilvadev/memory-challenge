@@ -8,8 +8,7 @@ function Home() {
 	return (
 		<section className={styles.wrapper}>
 			<h1 className={styles.title}>Memory Challenge</h1>
-			{/* TODO: Update route path the next page is created */}
-			<Link className={styles.link} to={ROUTES.HOME}>
+			<Link className={styles.link} to={ROUTES.GAME}>
 				Start
 			</Link>
 		</section>
