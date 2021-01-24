@@ -1,7 +1,10 @@
 export function reducer(state = {}, action = {}) {
-	if (action.type === 'CREATE_USER') {
-		return action.payload.user;
+	switch (action.type) {
+		case 'CREATE_USER':
+			return action.payload.user;
+		case 'RESET_ACTIVE_USER':
+			return {};
+		default:
+			return state;
 	}
-
-	return state;
 }

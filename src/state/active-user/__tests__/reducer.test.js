@@ -18,6 +18,18 @@ describe('Active user - reducer', () => {
 		});
 	});
 
+	it('should reset user', () => {
+		const previouState = {
+			name: 'mr robot',
+		};
+		const action = {
+			type: 'RESET_ACTIVE_USER',
+		};
+		const newState = reducer(previouState, action);
+
+		expect(newState).toEqual({});
+	});
+
 	it('should do nothing if action is unknown', () => {
 		const previousState = {name: 'mr robot'};
 		const action = {type: 'UNKNOWN'};

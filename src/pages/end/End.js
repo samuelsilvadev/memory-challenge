@@ -8,11 +8,14 @@ import styles from './End.module.css';
 
 function End() {
 	const {push} = useHistory();
-	const {user} = useActiveUser();
+	const {
+		user,
+		actions: {resetActiveUser},
+	} = useActiveUser();
 	const {scoreboard} = useUser({user});
 
 	const handleOnClick = () => {
-		// TODO: reset active user;
+		resetActiveUser();
 		push(ROUTES.GAME);
 	};
 
