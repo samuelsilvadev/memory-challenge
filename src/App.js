@@ -3,6 +3,7 @@ import {Provider} from 'react-redux';
 
 import Home from 'pages/home';
 import Game from 'pages/game';
+import End from 'pages/end';
 
 import {buildStore} from 'state/buildStore';
 
@@ -20,6 +21,9 @@ function App() {
 					<Switch>
 						<Route path={ROUTES.GAME}>
 							<Game />
+						</Route>
+						<Route path={ROUTES.END}>
+							<End />
 						</Route>
 						<Route path={ROUTES.HOME}>
 							<Home />
